@@ -1,0 +1,3 @@
+haml --version '>=2.2.23'
+maruku --version '~> 0.6'
+

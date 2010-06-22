@@ -1,0 +1,93 @@
+*
+  font-family: verdana,sans-serif
+  font-size: 100%
+  line-height: 1em
+
+body
+  margin: 17px 0px
+  background: rgb(79, 144, 198) url(/images/blue_fade.gif) repeat-x scroll 0px 0px
+  text-align: center
+
+div#pageContainer
+  position: relative
+  width: 740px
+  min-height: 740px
+  margin: 0em auto
+  border: black solid 1px
+  background: white url(/images/moustache_monk.jpg) no-repeat scroll 0px 40px
+  text-align: left
+
+* html div#pageContainer
+  height: 740px
+
+h1
+  position: absolute
+  right: 10000px
+  bottom: 10000px
+
+p
+  margin: 1em 0px 0px 0px
+  padding: 0px
+  font-size: 0.8em
+  line-height: 1.4em
+
+li, th, td, dt, dd
+  font-size: 0.8em
+  line-height: 1.4em
+
+div
+  &.corner
+    position: absolute
+    width: 15px
+    height: 15px
+    overflow: hidden
+    background-color: white
+    background-image: url(/images/corners_sprite.gif)
+    background-repeat: no-repeat
+  &.topRight
+    top: -1px
+    right: -1px
+    background-position: -15px 0px
+  &.bottomRight
+    bottom: -1px
+    right: -1px
+    background-position: -15px -15px
+
+* html div.bottomRight
+  bottom: -2px
+
+div.bottomLeft
+  bottom: -1px
+  left: -1px
+  background-position: 0px -15px
+
+* html div.bottom_left
+  bottom: -2px
+
+div
+  &.topLeft
+    top: -1px
+    left: -1px
+    background-position: 0px 0px
+  &#mainText
+    margin: 388px 80px 0px 400px
+    text-align: right
+  &#pagesMenu
+    margin: 0px 80px 0px 0px
+    text-align: right
+  &#contactMenu
+    margin: 100px 80px 0px 0px
+    text-align: right
+
+.piped li
+  display: inline
+  margin: 0px 0px 0px 0.2em
+  border-left: black solid 0.08em
+  padding: 0px 0px 0px 0.6em
+  vertical-align: middle
+  &.noPipe
+    border-left-style: none
+
+div#contactMenu li.mobile
+  background: transparent url(/images/mobile.gif) no-repeat scroll center left
+  padding-left: 40px

@@ -1,0 +1,32 @@
+!!! Strict
+%html{:lang => "en"}
+  %head
+    %title Kaizen Internet | Home
+    %meta{:content => "text/html; charset=iso-8859-1", "http-equiv" => "content-type"}/
+    %meta{:content => "Ben Saunders", :name => "author"}/
+    %meta{:content => "Accessible web design company based in Godalming, UK", :name => "description"}/
+    %meta{:content => "html,xhtml,ben saunders,saunders,godalming,surrey,guildford,website,css,web design", :name => "keywords"}/
+    %style{:media => "screen", :type => "text/css"}
+      @import '/stylesheets/main.css';
+    %link{:href => "/kaizen.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+  %body#home
+    #pageContainer
+      .topRight.corner
+      .topLeft.corner
+      %h1
+        %span.text Kaizen
+      = yield
+      #contactMenu
+        %ul.piped
+          %li.noPipe
+            %a{:href => "mailto:ben@kaizeninternet.com"} ben@kaizeninternet.com
+      .bottomRight.corner
+      .bottomLeft.corner
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    :javascript
+      try {
+      var pageTracker = _gat._getTracker("UA-11596953-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
