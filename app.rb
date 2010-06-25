@@ -3,6 +3,13 @@ require 'sinatra'
 require 'haml'
 require 'maruku'
 
+before do
+  if request.host != 'www.kaizeninternet.com'
+    redirect "http://www.kaizeninternet.com"+request.fullpath, 301
+  end
+end
+
+
 get '/' do
   haml :index
 end
