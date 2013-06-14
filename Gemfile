@@ -1,4 +1,5 @@
+source 'https://rubygems.org'
+
 gem 'haml'
 gem 'maruku'
-gem 'rubygems'
 gem 'sinatra'

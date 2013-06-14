@@ -1,0 +1,9 @@
+rvm ruby-1.9.2@kaizeninternet.com --create
+
+# Ensure that Bundler is installed, install it if it is not.
+if ! command -v bundle ; then
+  gem install bundler 
+fi
+
+# Bundle while reducing excess noise.
+bundle --without production | grep -v 'Using' | grep -v 'complete' | sed '/^$/d'
