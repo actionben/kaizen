@@ -1,9 +1,18 @@
 require 'sinatra'
 require 'haml'
 require 'maruku'
+require 'sass'
+  
+configure :development do
+  set redirect: false
+end
+  
+configure :production do
+  set redirect: true
+end
 
 before do
-  if request.host != 'www.kaizeninternet.com'
+  if settings.redirect && request.host != 'www.kaizeninternet.com'
     redirect "http://www.kaizeninternet.com"+request.fullpath, 301
   end
 end
